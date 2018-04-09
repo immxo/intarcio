@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+h1,h2,p{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+}
+
+.about{
+    padding: 40px 30px 0 30px;
+}
+
+.title{
+    font: 32px Lato;
+    margin: 0 0 20px 0;
+}
+
+.titleSmall{
+    font: 18px Lato;
+    margin: 0 0 10px 0;
+}
+
+.text{
+    font: 16px Lato;
+    margin: 0 0 10px 0;
+}
+
+.textList{
+    font: 16px Lato;
+}

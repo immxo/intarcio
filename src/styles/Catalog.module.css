@@ -1,0 +1,16 @@
+.catalog{
+    display: flex;
+    justify-content: space-around;
+    background-color: #290F00;
+    padding: 25px 0 25px 0;
+}
+
+.catalog__link{
+    font: 18px Lato;
+    color: #fff;
+    text-decoration: none;
+}
+
+.catalog__link:hover{
+    color: #FFFA6A;
+}
