@@ -1,0 +1,58 @@
+.HowWorks{
+    background-color: #EFEFEF;
+    padding: 40px 30px 40px 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+
+.smartphone__img{
+    background-image: url("../media/smartphone.png");
+    width: 128px;
+    height: 128px;
+}
+
+.ruler__img{
+    background-image: url("../media/ruler.png");
+    width: 128px;
+    height: 128px;
+}
+
+.design__img{
+    background-image: url("../media/design.png");
+    width: 128px;
+    height: 128px;
+}
+
+.handtool__img{
+    background-image: url("../media/handtool.png");
+    width: 128px;
+    height: 128px;
+}
+
+.nut__img{
+    background-image: url("../media/nut.png");
+    width: 128px;
+    height: 128px;
+}
+
+.tools__img{
+    background-image: url("../media/tools.png");
+    width: 128px;
+    height: 128px;
+}
+
+.text{
+    font: 18px Lato;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.title{
+    font: 32px Lato;
+    margin: 20px 0 30px 0;
+}

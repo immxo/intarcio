@@ -1,0 +1,57 @@
+.footer{
+    background-color: #290F00;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 30px 40px 30px;
+}
+
+.row{
+    display: grid;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__link{
+    font: 18px Lato;
+    color: #fff;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0 0 0 50px;
+}
+
+.nav__link:hover{
+    color: #FFFA6A;
+}
+
+.phone__title{
+    font: 20px Lato;
+    color: #fff;
+}
+
+.phone__text{
+    font: 12px Lato;
+    color: #AEAEAE;
+}
+
+.vk__text{
+    font: 18px Lato;
+    color: #fff;
+    text-decoration: none;
+}
+
+.vk{
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    margin: 20px 0 0 0;
+}
+
+.vk__img{
+    background-image: url("../media/vk.png");
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
+}
