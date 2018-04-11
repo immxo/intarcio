@@ -3,7 +3,7 @@ import Catalog from "./Catalog";
 import About from "./About";
 import HowWorks from "./HowWorks";
 import Contacts from "./Contacts";
-import Footer from "./footer";
+import Footer from "./Footer";
 import Header from "./Header";
 
 class App extends Component {
