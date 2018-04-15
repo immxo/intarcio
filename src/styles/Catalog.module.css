@@ -1,7 +1,8 @@
 .catalog{
     display: flex;
     justify-content: space-around;
-    background-color: #290F00;
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(96,148,156,1)),
+    color-stop(22%, rgba(103,159,167,1)), color-stop(78%, rgba(103,159,167,1)), color-stop(100%, rgba(96,148,156,1)));
     padding: 25px 0 25px 0;
 }
 
