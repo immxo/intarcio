@@ -12,7 +12,7 @@ class Catalog extends Component {
                     <a className={styles.catalog__link} href="">Гардеробные</a>
                     <a className={styles.catalog__link} href="">Прихожие</a>
                     <a className={styles.catalog__link} href="">Детская мебель</a>
-                    <a className={styles.catalog__link} href="">Торговая мебель</a>
+                    <a className={styles.catalog__link} href="">Торговые острова</a>
                     <a className={styles.catalog__link} href="">Еще <i className="fas fa-caret-down"></i></a>
                 </div>
     }

@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+import Catalog from "./Catalog";
 import styles from '../styles/Header.module.css'
 import ModalReact from 'react-modal';
 
 const customStyles = {
-    content : {
+    content: {
         top                   : '50%',
         left                  : '50%',
         right                 : 'auto',
         bottom                : 'auto',
         marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
+        transform             : 'translate(-50%, -50%)',
+        opacity: '1'
     },
     overlay: {
         backgroundColor: 'RGBA(0, 0, 0, 0.5)'
+    },
+    afterOpen: {
+        opacity: '1',
+        transition: 'opacity 1s'
     }
 };
 
@@ -74,7 +80,9 @@ class Header extends Component {
                     isOpen={this.props.modalIsOpen}
                     onRequestClose={this.onCloseModalBtnClick.bind(this)}
                     style={customStyles}
-                    contentLabel="Example Modal"
+                    // className={styles.Modal}
+                    // overlayClassName={styles.Overlay}
+                    // afterOpenClassName={styles.afterOpen}
                 >
                     <div className={styles.modal__container}>
                             <button className={styles.close} onClick={this.onCloseModalBtnClick.bind(this)}>X</button>
@@ -89,7 +97,7 @@ class Header extends Component {
                             </button>
                     </div>
                 </ModalReact>
-
+                <Catalog/>
             </header>
 
     }
