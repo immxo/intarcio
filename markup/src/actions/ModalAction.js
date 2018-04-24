@@ -11,13 +11,18 @@ export function openModal(type) {
             payload: {open:true, display: '', title: 'Вызов замерщика'}
         }
     }
-
 }
 
 export function closeModal() {
-
     return {
         type: 'CLOSE_MODAL',
         payload: false
+    }
+}
+
+export function sendPost(data) {
+    return{
+        type: 'SEND_MODAL_POST',
+        payload: data
     }
 }

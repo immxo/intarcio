@@ -13,6 +13,9 @@ export default function modal(state = initialState, action) {
         case 'CLOSE_MODAL':
             return { ...state, modalIsOpen: action.payload }
 
+        case  'SEND_MODAL_POST':
+            return { ...state }
+
     default:
         return state
     }

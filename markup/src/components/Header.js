@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import Catalog from "./Catalog";
 import styles from '../styles/Header.module.css'
 import ModalReact from 'react-modal';
@@ -25,6 +26,13 @@ const customStyles = {
 
 
 class Header extends Component {
+    state = {
+        name: '',
+        tel: '',
+        email: '',
+        comment: ''
+    };
+
     modalCallMaster() {
         this.props.openModal('master');
     }
@@ -37,6 +45,46 @@ class Header extends Component {
     onCloseModalBtnClick() {
         this.props.closeModal();
     }
+
+    onChangeName(e){
+        let val = e.target.value;
+        this.setState({name: val})
+    }
+
+    onChangeTel(e){
+        let val = e.target.value;
+        this.setState({tel: val})
+    }
+
+    onChangeEmail(e){
+        let val = e.target.value;
+        this.setState({email: val})
+    }
+
+    onChangeComment(e){
+        let val = e.target.value;
+        this.setState({comment: val})
+    }
+
+    handleSubmit(e){
+        let self = this;
+        e.preventDefault();
+        const data = {
+            name: this.state.name,
+            tel: this.state.tel,
+            email: this.state.email,
+            comment: this.state.comment
+        };
+        axios.post('/orders/insert', data)
+            .then(function () {
+                self.props.closeModal();
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
+
     render() {
         return <header className={styles.header}>
                 <div className={styles.container}>
@@ -80,18 +128,20 @@ class Header extends Component {
                     isOpen={this.props.modalIsOpen}
                     onRequestClose={this.onCloseModalBtnClick.bind(this)}
                     style={customStyles}
-                    // className={styles.Modal}
-                    // overlayClassName={styles.Overlay}
-                    // afterOpenClassName={styles.afterOpen}
                 >
                     <div className={styles.modal__container}>
                             <button className={styles.close} onClick={this.onCloseModalBtnClick.bind(this)}>X</button>
                             <h2 className={styles.modal__title}>{this.props.title}</h2>
-                            <input className={styles.modal__input} type="text" placeholder='Ваше имя'/>
-                            <input className={styles.modal__input} type="text" placeholder='+7-(xxx)-xxx-xx-xx '/>
-                            <input style={{display: this.props.display}} className={styles.modal__input} type="text" placeholder='E-mail'/>
-                            <textarea className={styles.modal__textarea}  cols="30" rows="10" placeholder='Комментарий'></textarea>
-                            <button className={styles.modal__button}>
+                            <input className={styles.modal__input} type="text" value={this.state.name}
+                                   onChange={e=>this.onChangeName(e)} placeholder='Ваше имя'/>
+                            <input className={styles.modal__input} type="text" value={this.state.tel}
+                                   onChange={e=>this.onChangeTel(e)} placeholder='+7-(xxx)-xxx-xx-xx '/>
+                            <input style={{display: this.props.display}} value={this.state.email}
+                                   className={styles.modal__input} type="text"
+                                   onChange={e=>this.onChangeEmail(e)} placeholder='E-mail'/>
+                            <textarea className={styles.modal__textarea} value={this.state.comment}  cols="30" rows="10"
+                                      onChange={e=>this.onChangeComment(e)} placeholder='Комментарий'></textarea>
+                            <button className={styles.modal__button} onClick={e=>this.handleSubmit(e)}>
                                 Отправить
                                 <div className={styles.send__img}></div>
                             </button>
