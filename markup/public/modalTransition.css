@@ -1,0 +1,12 @@
+.ReactModal__Content {
+    opacity: 0 !important;
+}
+
+.ReactModal__Content--after-open {
+    opacity: 1 !important;
+    transition: opacity 600ms !important;
+}
+
+.ReactModal__Content--before-close {
+    opacity: 0 !important;
+}
