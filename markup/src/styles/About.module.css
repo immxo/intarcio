@@ -5,6 +5,8 @@ h1,h2,p{
     -webkit-margin-after:0;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
+    margin: 0;
+    padding: 0;
 }
 
 .about{

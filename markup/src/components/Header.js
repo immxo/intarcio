@@ -46,6 +46,14 @@ class Header extends Component {
         this.props.closeModal();
     }
 
+    openNotification(bool){
+        this.props.openNotification(bool);
+    }
+
+    closeNotification(){
+        this.props.closeNotification();
+    }
+
     onChangeName(e){
         let val = e.target.value;
         this.setState({name: val})
@@ -76,8 +84,15 @@ class Header extends Component {
             comment: this.state.comment
         };
         axios.post('/orders/insert', data)
-            .then(function () {
-                self.props.closeModal();
+            .then(function (res) {
+                self.onCloseModalBtnClick();
+                console.log(res.data.status);
+                if(res.data.status){
+                    self.openNotification(true);
+                }
+                else {
+                    self.openNotification(false);
+                }
             })
             .catch(function (error) {
                 console.log(error);
@@ -147,6 +162,18 @@ class Header extends Component {
                             </button>
                     </div>
                 </ModalReact>
+
+                <ModalReact
+                    isOpen={this.props.notificationIsOpen}
+                    onRequestClose={this.onCloseModalBtnClick.bind(this)}
+                    style={customStyles}
+                >
+                    <div className={styles.modal__container}>
+                        <button className={styles.close} onClick={this.closeNotification.bind(this)}>X</button>
+                        <p>{this.props.text}</p>
+                    </div>
+                </ModalReact>
+
                 <Catalog/>
             </header>
 

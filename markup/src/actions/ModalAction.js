@@ -20,9 +20,24 @@ export function closeModal() {
     }
 }
 
-export function sendPost(data) {
+export function openNotification(bool) {
+    if(bool === true){
+        return{
+            type: 'OPEN_NOTIFICATION',
+            payload: {open: true, text: 'Спасибо за оставленную заявку. В ближайщие время с вами свяжется наш консультант.'}
+        }
+    }
+    else{
+        return{
+            type: 'OPEN_NOTIFICATION',
+            payload: {open: true, text: 'Произошла ошибка. Пожалуйста попробуйте снова.'}
+        }
+    }
+}
+
+export function closeNotification() {
     return{
-        type: 'SEND_MODAL_POST',
-        payload: data
+        type: 'CLOSE_NOTIFICATION',
+        payload: false
     }
 }

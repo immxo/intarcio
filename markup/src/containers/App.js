@@ -10,11 +10,13 @@ import * as modalAction from '../actions/ModalAction'
 
 class App extends Component {
     render() {
-        const {modalIsOpen, display, title} = this.props.modal
-        const {openModal , closeModal, sendPost} = this.props.modalAction
+        const {modalIsOpen, display, title, notificationIsOpen, text} = this.props.modal
+        const {openModal , closeModal, openNotification, closeNotification} = this.props.modalAction
         return <div>
-            <Header modalIsOpen={modalIsOpen} display={display} title={title} openModal={openModal}
-                    closeModal={closeModal} sendPost = {sendPost}/>
+            <Header modalIsOpen={modalIsOpen} display={display} title={title} notificationIsOpen={notificationIsOpen}
+                    text = {text} openModal={openModal} closeModal={closeModal} openNotification={openNotification}
+                    closeNotification={closeNotification}
+            />
             <About/>
             <HowWorks/>
             <Contacts/>

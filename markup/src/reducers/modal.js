@@ -1,6 +1,8 @@
 const initialState = {
     modalIsOpen: false,
-    display: ''
+    display: '',
+    notificationIsOpen: false,
+    text: ''
 }
 
 export default function modal(state = initialState, action) {
@@ -12,10 +14,10 @@ export default function modal(state = initialState, action) {
 
         case 'CLOSE_MODAL':
             return { ...state, modalIsOpen: action.payload }
-
-        case  'SEND_MODAL_POST':
-            return { ...state }
-
+        case 'OPEN_NOTIFICATION':
+            return { ...state, notificationIsOpen: action.payload.open, text: action.payload.text }
+        case 'CLOSE_NOTIFICATION':
+            return {...state, notificationIsOpen: action.payload.open, text: action.payload.text}
     default:
         return state
     }

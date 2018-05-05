@@ -31,8 +31,8 @@ router.post('/insert', function(req, res) {
         comment: req.body.comment
     });
     order.save(function (err) {
-        if(err) console.log(err);
-        res.send(order);
+        if(err) res.json({status: false});
+        res.json({status: true});
     });
 
 });
