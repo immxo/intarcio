@@ -1,0 +1,84 @@
+.kitchen{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+
+}
+
+.kitchen__container{
+    width: 1200px;
+    padding: 40px 0 40px 0;
+}
+
+.kitchen__title{
+    font: 32px Lato;
+    font-weight: 400;
+}
+
+.kitchen__text{
+    font: 16px Lato;
+    font-weight: 400;
+    margin: 10px 0 30px 0;
+}
+
+.kitchenType__text{
+    font: 16px Lato;
+    font-weight: 400;
+    margin: 10px 0 30px 0;
+}
+
+.kitchenType{
+    display: flex;
+    justify-content: space-around;
+}
+
+.kitchenType__title{
+    font: 18px Lato;
+    font-weight: 700;
+    margin: 20px 0 0 0;
+}
+
+.kitchenType__classicImg{
+    background-image: url("../media/kitchen/classic.png");
+    width: 700px;
+    height: 300px;
+}
+
+.kitchenType__modernImg{
+    background-image: url("../media/kitchen/modern.png");
+    width: 700px;
+    height: 300px;
+}
+
+.kitchenType__economImg{
+    background-image: url("../media/kitchen/econom.png");
+    width: 700px;
+    height: 300px;
+}
+
+.kitchenType__container{
+    width: 460px;
+    padding: 20px;
+}
+
+.kitchenType__button{
+    width: 220px;
+    height: 60px;
+    background-color: #FFFA6A;
+    border-radius: 3px;
+    border: 0px solid #FCB600;
+    color: #290F00;
+    font: 18px Lato;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    cursor: pointer;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.kitchenType__buttonImg{
+    background-image: url("../media/kitchen/order.png");
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 0;
+}

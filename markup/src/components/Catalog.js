@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import styles from '../styles/Catalog.module.css'
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 class Catalog extends Component {
+
+
     render() {
         return <div className={styles.catalog}>
-                    <a className={styles.catalog__link} href="/users">Кухни</a>
+                    <Link className={styles.catalog__link} to="/kitchen">Кухни</Link>
                     <a className={styles.catalog__link} href="">Спальни</a>
                     <a className={styles.catalog__link} href="">Подъемные кровати</a>
                     <a className={styles.catalog__link} href="">Гостиные</a>

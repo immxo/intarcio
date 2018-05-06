@@ -104,8 +104,10 @@ class Header extends Component {
         return <header className={styles.header}>
                 <div className={styles.container}>
                     <div className={styles.logo}>
-                        <h1 className={styles.logo__title}>Интарсия</h1>
-                        <p className={styles.logo__text}>Корпусная мебель на заказ</p>
+                        <a href="/" className={styles.logoLink}>
+                            <h1 className={styles.logo__title}>Интарсия</h1>
+                            <p className={styles.logo__text}>Корпусная мебель на заказ</p>
+                        </a>
                     </div>
 
                     <div className={styles.phone}>
