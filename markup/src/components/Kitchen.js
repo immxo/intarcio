@@ -6,7 +6,7 @@ class Kitchen extends Component {
         return(
             <section className={styles.kitchen}>
                 <div className={styles.kitchen__container}>
-                    <h2 className={styles.kitchen__title}>Кухни на заказ от производителя</h2>
+                    <h2 className={styles.kitchen__title}>Кухни на заказ от мебельного производства Интарсия</h2>
                     <p className={styles.kitchen__text}>В салоне «Интарсио» Вы можете купить недорого кухню от
                         производителя в Санкт-Петербурге на заказ по индивидуальным размерам и дизайнерским пожеланиям,
                         от эконом до премиум класса. Срок изготовления минимальный: 2-4 недели, в зависимости от

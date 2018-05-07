@@ -9,7 +9,9 @@
     "react-modal": "^3.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "react-router-transition": "^1.2.1",
     "react-scripts-cssmodules": "^1.1.10",
+    "react-scrollchor": "^5.0.2",
     "react-transition-group": "^2.3.1",
     "redux": "^3.7.2"
   },

@@ -6,9 +6,11 @@ import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Kitchen from "../components/Kitchen";
+import Bedroom from "../components/Bedroom";
 import {connect} from "react-redux";
 import * as modalAction from '../actions/ModalAction'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { AnimatedSwitch } from 'react-router-transition';
 
 class App extends Component {
     render() {
@@ -23,7 +25,19 @@ class App extends Component {
                         text = {text} openModal={openModal} closeModal={closeModal} openNotification={openNotification}
                         closeNotification={closeNotification}
                 />
-                <Route path="/kitchen" component={Kitchen} />
+                <AnimatedSwitch
+                    atEnter={{ opacity: 0 }}
+                    atLeave={{ opacity: 0 }}
+                    atActive={{ opacity: 1 }}
+                    mapStyles={(styles) => ({
+                        opacity: `opacity(${styles.opacity}%)`,
+                        transitionDuration: '10000'
+                    })}
+                    className="route-wrapper"
+                >
+                    <Route path="/kitchen" component={Kitchen} />
+                    <Route path="/bedroom" component={Bedroom} />
+                </AnimatedSwitch>
                 <About/>
                 <HowWorks/>
                 <Contacts/>

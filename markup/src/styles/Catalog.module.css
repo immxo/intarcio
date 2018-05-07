@@ -12,6 +12,14 @@
     margin: 20px 0 0 0;
 }
 
+.catalog__link:visited{
+    color: #fff;
+}
+
 .catalog__link:hover{
+    color: #FFFA6A;
+}
+
+.catalog__link:active{
     color: #FFFA6A;
 }
