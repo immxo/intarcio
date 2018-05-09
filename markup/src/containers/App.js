@@ -10,7 +10,6 @@ import Bedroom from "../components/Bedroom";
 import {connect} from "react-redux";
 import * as modalAction from '../actions/ModalAction'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { AnimatedSwitch } from 'react-router-transition';
 
 class App extends Component {
     render() {
@@ -25,19 +24,8 @@ class App extends Component {
                         text = {text} openModal={openModal} closeModal={closeModal} openNotification={openNotification}
                         closeNotification={closeNotification}
                 />
-                <AnimatedSwitch
-                    atEnter={{ opacity: 0 }}
-                    atLeave={{ opacity: 0 }}
-                    atActive={{ opacity: 1 }}
-                    mapStyles={(styles) => ({
-                        opacity: `opacity(${styles.opacity}%)`,
-                        transitionDuration: '10000'
-                    })}
-                    className="route-wrapper"
-                >
-                    <Route path="/kitchen" component={Kitchen} />
-                    <Route path="/bedroom" component={Bedroom} />
-                </AnimatedSwitch>
+                <Route path="/kitchen" component={Kitchen} />
+                <Route path="/bedroom" component={Bedroom} />
                 <About/>
                 <HowWorks/>
                 <Contacts/>
