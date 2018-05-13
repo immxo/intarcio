@@ -3,6 +3,7 @@ import axios from 'axios';
 import Catalog from "./Catalog";
 import styles from '../styles/Header.module.css'
 import ModalReact from 'react-modal';
+import Scrollchor from 'react-scrollchor';
 
 const customStyles = {
     content: {
@@ -74,19 +75,19 @@ class Header extends Component {
         this.setState({comment: val})
     }
 
-    handleSubmit(e){
+    handleSubmit(e, source){
         let self = this;
         e.preventDefault();
         const data = {
             name: this.state.name,
             tel: this.state.tel,
             email: this.state.email,
-            comment: this.state.comment
+            comment: this.state.comment,
+            source: source
         };
         axios.post('/orders/insert', data)
             .then(function (res) {
                 self.onCloseModalBtnClick();
-                console.log(res.data.status);
                 if(res.data.status){
                     self.openNotification(true);
                 }
@@ -118,10 +119,16 @@ class Header extends Component {
                     </div>
 
                     <nav className={styles.nav}>
-                        <a href="/" className={styles.nav__link}>Главная</a>
-                        <a href="" className={styles.nav__link}>О компании</a>
-                        <a href="" className={styles.nav__link}>Как мы работаем</a>
-                        <a href="" className={styles.nav__link}>Контакты</a>
+                        <a href='/' className={styles.nav__link}>Главная</a>
+                        <Scrollchor to="#about" animate={{  duration: 400 }} className={styles.nav__link}>
+                            <a>О компании</a>
+                        </Scrollchor>
+                        <Scrollchor to="#howWeWorks" animate={{  duration: 400 }} className={styles.nav__link}>
+                            <a>Как мы работаем</a>
+                        </Scrollchor>
+                        <Scrollchor to="#contacts" animate={{  duration: 400 }} className={styles.nav__link}>
+                            <a>Контакты</a>
+                        </Scrollchor>
                     </nav>
                 </div>
 
@@ -158,7 +165,7 @@ class Header extends Component {
                                    onChange={e=>this.onChangeEmail(e)} placeholder='E-mail'/>
                             <textarea className={styles.modal__textarea} value={this.state.comment}  cols="30" rows="10"
                                       onChange={e=>this.onChangeComment(e)} placeholder='Комментарий'></textarea>
-                            <button className={styles.modal__button} onClick={e=>this.handleSubmit(e)}>
+                            <button className={styles.modal__button} onClick={e=>(this.handleSubmit(e, this.props.source))}>
                                 Отправить
                                 <div className={styles.send__img}></div>
                             </button>

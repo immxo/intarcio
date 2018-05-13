@@ -14,18 +14,30 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class App extends Component {
     render() {
 
-        const {modalIsOpen, display, title, notificationIsOpen, text} = this.props.modal
-        const {openModal , closeModal, openNotification, closeNotification} = this.props.modalAction
+        const {modalIsOpen, display, title, notificationIsOpen, text, source, orderIsOpen} = this.props.modal
+        const {openModal , closeModal, openNotification, closeNotification, openOrder, closeOrder} = this.props.modalAction
         return(
 
         <Router>
             <div>
                 <Header modalIsOpen={modalIsOpen} display={display} title={title} notificationIsOpen={notificationIsOpen}
-                        text = {text} openModal={openModal} closeModal={closeModal} openNotification={openNotification}
-                        closeNotification={closeNotification}
+                        text={text} source={source} openModal={openModal} closeModal={closeModal}
+                        openNotification={openNotification} closeNotification={closeNotification}
                 />
-                <Route path="/kitchen" component={Kitchen} />
-                <Route path="/bedroom" component={Bedroom} />
+                <Route path="/kitchen"
+                       render={(props) => <Kitchen {...props} orderIsOpen={orderIsOpen} source={source}
+                                                   openOrder={openOrder} closeOrder={closeOrder}
+                                                   openNotification={openNotification}
+                                                   closeNotification={closeNotification}
+                                                   notificationIsOpen={notificationIsOpen} text={text}/>}
+                />
+                <Route path="/bedroom"
+                       render={(props) => <Bedroom {...props} orderIsOpen={orderIsOpen} source={source}
+                                                   openOrder={openOrder} closeOrder={closeOrder}
+                                                   openNotification={openNotification}
+                                                   closeNotification={closeNotification}
+                                                   notificationIsOpen={notificationIsOpen} text={text}/>}
+                />
                 <About/>
                 <HowWorks/>
                 <Contacts/>

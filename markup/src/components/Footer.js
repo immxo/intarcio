@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../styles/Footer.module.css'
+import Scrollchor from 'react-scrollchor';
 
 class Footer extends Component {
     render() {
@@ -12,10 +13,16 @@ class Footer extends Component {
                     </div>
                     <div className={styles.row}>
                         <nav className={styles.nav}>
-                            <a href="/" className={styles.nav__link}>Главная</a>
-                            <a href="" className={styles.nav__link}>О компании</a>
-                            <a href="" className={styles.nav__link}>Как мы работаем</a>
-                            <a href="" className={styles.nav__link}>Контакты</a>
+                            <a href='/' className={styles.nav__link}>Главная</a>
+                            <Scrollchor to="#about" animate={{  duration: 400 }} className={styles.nav__link}>
+                                <a>О компании</a>
+                            </Scrollchor>
+                            <Scrollchor to="#howWeWorks" animate={{  duration: 400 }} className={styles.nav__link}>
+                                <a>Как мы работаем</a>
+                            </Scrollchor>
+                            <Scrollchor to="#contacts" animate={{  duration: 400 }} className={styles.nav__link}>
+                                <a>Контакты</a>
+                            </Scrollchor>
                         </nav>
 
                         <div className={styles.vk}>

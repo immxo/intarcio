@@ -10,6 +10,7 @@
     color: #fff;
     text-decoration: none;
     margin: 20px 0 0 0;
+    transition: color 250ms;
 }
 
 .catalog__link:visited{

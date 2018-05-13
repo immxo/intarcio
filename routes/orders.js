@@ -11,7 +11,8 @@ const OrderSchema = new Schema({
     name     : String,
     tel      : Number,
     email    : String,
-    comment  : String
+    comment  : String,
+    source   : String
 });
 const Order = mongoose.model("Order", OrderSchema);
 
@@ -28,8 +29,10 @@ router.post('/insert', function(req, res) {
         name: req.body.name,
         tel: req.body.tel,
         email: req.body.email,
-        comment: req.body.comment
+        comment: req.body.comment,
+        source: req.body.source
     });
+    console.log(order);
     order.save(function (err) {
         if(err) res.json({status: false});
         res.json({status: true});

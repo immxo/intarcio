@@ -89,7 +89,7 @@ h1,h2,h3,p{
     color: #fff;
     list-style-type: none;
     text-decoration: none;
-
+    transition: color 250ms;
     font-weight: 400;
 }
 

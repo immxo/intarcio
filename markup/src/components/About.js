@@ -3,7 +3,7 @@ import styles from '../styles/About.module.css'
 
 class About extends Component {
     render() {
-        return <section className={styles.about}>
+        return <section id='about' className={styles.about}>
            <h1 className={styles.title}>О компании</h1>
            <p className={styles.text}>Производство корпусной мебели – это специализация нашей компании. Наша компания
                занимается изготовлением корпусной мебели по индивидуальным проектам. Обратившись к нам Вы получите

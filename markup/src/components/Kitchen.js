@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import styles from '../styles/Kitchen.module.css'
+import ModalOrder from './ModalOrder'
 
 class Kitchen extends Component {
+
+    openOrder(type) {
+        this.props.openOrder(type);
+    }
+
     render() {
         return(
             <section className={styles.kitchen}>
@@ -23,7 +29,8 @@ class Kitchen extends Component {
                                 богатством и продуманностью деталей. Однако, он не ограничивается строгими рамками и
                                 правилами. Определение «классический стиль в интерьере» охватывает сразу несколько эпох
                                 и деталей, характерных для них.</p>
-                            <button className={styles.kitchenType__button}>
+                            <button className={styles.kitchenType__button}
+                                onClick={() => this.openOrder('Классические кухни')}>
                                 <div className={styles.kitchenType__buttonImg}></div>
                                 Оставить заявку
                             </button>
@@ -37,7 +44,8 @@ class Kitchen extends Component {
                                 цветов, игра контрастов. В материалах часто используется стекло, пластик и металл.
                                 Основное требование к мебели в современном стиле – функциональность и отсутствие
                                 излишнего вычурного декора</p>
-                            <button className={styles.kitchenType__button}>
+                            <button className={styles.kitchenType__button}
+                                    onClick={() => this.openOrder('Современные кухни')}>
                                 <div className={styles.kitchenType__buttonImg}></div>
                                 Оставить заявку
                             </button>
@@ -49,14 +57,19 @@ class Kitchen extends Component {
                             <h3 className={styles.kitchenType__title}>Экономные кухни </h3>
                             <p className={styles.kitchenType__text}>Кухни модульные эконом-класса — идеальное решение, если
                                 нужно быстро, качественно и недорого сделать помещение функциональным и красивым</p>
-                            <button className={styles.kitchenType__button}>
+                            <button className={styles.kitchenType__button}
+                                    onClick={() => this.openOrder('Экономные кухни')}>
                                 <div className={styles.kitchenType__buttonImg}></div>
                                 Оставить заявку
                             </button>
                         </div>
                     </div>
-
                 </div>
+
+                <ModalOrder orderIsOpen={this.props.orderIsOpen} closeOrder={this.props.closeOrder}
+                            openNotification={this.props.openNotification} source={this.props.source}
+                            closeNotification={this.props.closeNotification}
+                            notificationIsOpen={this.props.notificationIsOpen} text={this.props.text}/>
             </section>
         )}
 }

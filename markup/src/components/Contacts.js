@@ -3,7 +3,7 @@ import styles from '../styles/Contacts.module.css'
 
 class Contacts extends Component {
     render() {
-        return <section className={styles.contacts}>
+        return <section id='contacts' className={styles.contacts}>
             <h1 className={styles.title}>Контакты</h1>
             <div className={styles.container}>
                 <div></div>

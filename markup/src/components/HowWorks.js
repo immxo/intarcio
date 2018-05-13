@@ -3,7 +3,7 @@ import styles from '../styles/HowWorks.module.css'
 
 class HowWorks extends Component {
     render() {
-        return <section className={styles.HowWorks}>
+        return <section id='howWeWorks' className={styles.HowWorks}>
             <h1 className={styles.title}>Как мы работаем</h1>
             <div className={styles.container}>
                 <div className={styles.howWorksItem}>
