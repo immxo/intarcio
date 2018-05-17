@@ -3,6 +3,7 @@ import axios from 'axios';
 import Catalog from "./Catalog";
 import styles from '../styles/Header.module.css'
 import ModalReact from 'react-modal';
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import Scrollchor from 'react-scrollchor';
 
 const customStyles = {
@@ -85,7 +86,7 @@ class Header extends Component {
             comment: this.state.comment,
             source: source
         };
-        axios.post('/orders/insert', data)
+        axios.post('http://xn--80apbshkhf.xn--p1ai/orders/insert', data)
             .then(function (res) {
                 self.onCloseModalBtnClick();
                 if(res.data.status){
@@ -103,12 +104,20 @@ class Header extends Component {
 
     render() {
         return <header className={styles.header}>
+            <div className={styles.header__container}>
                 <div className={styles.container}>
                     <div className={styles.logo}>
                         <a href="/" className={styles.logoLink}>
                             <h1 className={styles.logo__title}>Интарсия</h1>
                             <p className={styles.logo__text}>Корпусная мебель на заказ</p>
                         </a>
+                    </div>
+
+                    <div className={styles.menu__icon}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
 
                     <div className={styles.phone}>
@@ -130,7 +139,25 @@ class Header extends Component {
                             <a>Контакты</a>
                         </Scrollchor>
                     </nav>
+
                 </div>
+
+                <nav className={styles.navMobile}>
+                    <Scrollchor to="#catalog" animate={{  duration: 400 }} className={styles.catalog__link}>
+                        <Link  to="/kitchen" className={styles.catalog__link}>Кухни</Link>
+                    </Scrollchor>
+                    <Scrollchor to="#catalog" animate={{  duration: 400 }} className={styles.catalog__link}>
+                        <Link  to="/bedroom" className={styles.catalog__link}>Спальни</Link>
+                    </Scrollchor>
+                    <Link  to="/kitchen" className={styles.catalog__link}>Подъемные кровати</Link>
+                    <a className={styles.catalog__link} href="">Гостиные</a>
+                    <a className={styles.catalog__link} href="">Шкафы</a>
+                    <a className={styles.catalog__link} href="">Гардеробные</a>
+                    <a className={styles.catalog__link} href="">Прихожие</a>
+                    <a className={styles.catalog__link} href="">Детская мебель</a>
+                    <a className={styles.catalog__link} href="">Торговые острова</a>
+                    <a className={styles.catalog__link} href="">Еще <i className="fas fa-caret-down"></i></a>
+                </nav>
 
                 <div className={styles.slogan}>
                     <h1 className={styles.slogan__title}>Производство корпусной мебели – это<br/> специализация нашей компании</h1>
@@ -147,6 +174,7 @@ class Header extends Component {
                         Вызов замерщика
                     </button>
                 </div>
+            </div>
 
                 <ModalReact
                     isOpen={this.props.modalIsOpen}

@@ -56,3 +56,13 @@
     font: 32px Lato;
     margin: 20px 0 30px 0;
 }
+
+@media screen and (max-width: 450px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .text{
+        margin: 20px 0 40px 0;
+    }
+}

@@ -24,7 +24,7 @@ export function openNotification(bool) {
     if(bool === true){
         return{
             type: 'OPEN_NOTIFICATION',
-            payload: {open: true, text: 'Спасибо за оставленную заявку.В ближайщие время с вами свяжется наш консультант.'}
+            payload: {open: true, text: 'Спасибо за оставленную заявку. В ближайшие время с вами свяжется наш консультант.'}
         }
     }
     else{

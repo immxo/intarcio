@@ -55,3 +55,9 @@
     height: 24px;
     margin: 0 10px 0 0;
 }
+
+@media screen and (max-width: 450px) {
+    .nav__link{
+        display: none;
+    }
+}

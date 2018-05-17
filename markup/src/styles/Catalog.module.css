@@ -24,3 +24,14 @@
 .catalog__link:active{
     color: #FFFA6A;
 }
+
+@media screen and (max-width: 450px) {
+    .catalog__link{
+        display: none;
+    }
+
+    .catalog {
+        border-top: none;
+    }
+
+}

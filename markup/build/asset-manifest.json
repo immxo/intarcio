@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main-cssmodules.5987d43c.css",
-  "main.css.map": "static/css/main-cssmodules.5987d43c.css.map",
-  "main.js": "static/js/main.b4925e17.js",
-  "main.js.map": "static/js/main.b4925e17.js.map",
-  "static/media/bedroom.png": "static/media/bedroom.88eca603.png",
-  "static/media/classic.png": "static/media/classic.b5874100.png",
-  "static/media/econom.png": "static/media/econom.35e76f7b.png",
+  "main.css": "static/css/main-cssmodules.df401a06.css",
+  "main.css.map": "static/css/main-cssmodules.df401a06.css.map",
+  "main.js": "static/js/main.1def87df.js",
+  "main.js.map": "static/js/main.1def87df.js.map",
+  "static/media/bedroom.png": "static/media/bedroom.58e630e8.png",
+  "static/media/classic.png": "static/media/classic.8c579f14.png",
+  "static/media/econom.png": "static/media/econom.a00ea286.png",
   "static/media/headerBG.png": "static/media/headerBG.745f754b.png",
   "static/media/headerBG768.png": "static/media/headerBG768.a3186268.png",
   "static/media/lato-v14-latin-700.ttf": "static/media/lato-v14-latin-700.f467f2d0.ttf",
@@ -14,5 +14,5 @@
   "static/media/lato-v14-latin-regular.ttf": "static/media/lato-v14-latin-regular.da4b79be.ttf",
   "static/media/lato-v14-latin-regular.woff": "static/media/lato-v14-latin-regular.62fb51e9.woff",
   "static/media/lato-v14-latin-regular.woff2": "static/media/lato-v14-latin-regular.f1a4a058.woff2",
-  "static/media/modern.png": "static/media/modern.ae018009.png"
+  "static/media/modern.png": "static/media/modern.e3d0dfc9.png"
 }

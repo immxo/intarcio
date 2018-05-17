@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ModalReact from 'react-modal';
+import InputMask from 'react-input-mask';
 import styles from '../styles/Header.module.css'
 import Notification from "./Notification";
 
@@ -66,7 +67,7 @@ class ModalOrder extends Component {
             comment: this.state.comment,
             source: source
         };
-        axios.post('/orders/insert', data)
+        axios.post('http://xn--80apbshkhf.xn--p1ai/orders/insert', data)
             .then(function (res) {
                 self.closeOrder();
                 if (res.data.status) {
@@ -93,8 +94,9 @@ class ModalOrder extends Component {
                     <button className={styles.close} onClick={this.closeOrder.bind(this)}>X</button>
                     <input className={styles.modal__input} type="text" value={this.state.name}
                            onChange={e=>this.onChangeName(e)} placeholder='Ваше имя'/>
-                    <input className={styles.modal__input} type="text" value={this.state.tel}
-                           onChange={e=>this.onChangeTel(e)} placeholder='+7-(xxx)-xxx-xx-xx '/>
+                    <InputMask className={styles.modal__input} type="text" placeholder='+7-(xxx)-xxx-xx-xx'
+                               value={this.state.tel} onChange={e=>this.onChangeTel(e)} mask="+7 (999)-999-99-99"
+                               maskChar="" />
                     <textarea className={styles.modal__textarea} value={this.state.comment}  cols="30" rows="10"
                               onChange={e=>this.onChangeComment(e)} placeholder='Комментарий'></textarea>
                     <button className={styles.modal__button} onClick={e=>(this.handleSubmit(e, this.props.source))}>

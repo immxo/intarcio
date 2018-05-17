@@ -74,10 +74,10 @@
 .kitchenType__button{
     width: 220px;
     height: 60px;
-    background-color: #FFFA6A;
+    background-color: #639fa9;
     border-radius: 3px;
     border: 0px solid #FCB600;
-    color: #290F00;
+    color: #fff;
     font: 18px Lato;
     display: flex;
     justify-content: center;
