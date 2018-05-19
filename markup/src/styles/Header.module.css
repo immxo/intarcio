@@ -18,6 +18,20 @@
     url('../media/fonts/lato-v14-latin-700.ttf') format('truetype')
 }
 
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../media/fonts/pacifico-v12-latin_cyrillic-regular.eot');
+    src: local('Pacifico Regular'), local('Pacifico-Regular'),
+    url('../media/fonts/pacifico-v12-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+    url('../media/fonts/pacifico-v12-latin_cyrillic-regular.woff2') format('woff2'),
+    url('../media/fonts/pacifico-v12-latin_cyrillic-regular.woff') format('woff'),
+    url('../media/fonts/pacifico-v12-latin_cyrillic-regular.ttf') format('truetype'),
+    url('../media/fonts/pacifico-v12-latin_cyrillic-regular.svg#Pacifico') format('svg');
+}
+
+
 @media screen and (min-device-width: 900px) {
     .header {
         background-image: url("../media/headerBG.png");

@@ -1,11 +1,14 @@
 {
-  "main.css": "static/css/main-cssmodules.a74ae9e0.css",
-  "main.css.map": "static/css/main-cssmodules.a74ae9e0.css.map",
-  "main.js": "static/js/main.a4e707bf.js",
-  "main.js.map": "static/js/main.a4e707bf.js.map",
+  "main.css": "static/css/main-cssmodules.4a2c953f.css",
+  "main.css.map": "static/css/main-cssmodules.4a2c953f.css.map",
+  "main.js": "static/js/main.3ab345a8.js",
+  "main.js.map": "static/js/main.3ab345a8.js.map",
   "static/media/bedroom.png": "static/media/bedroom.58e630e8.png",
+  "static/media/bedroomMobile.png": "static/media/bedroomMobile.278c2fe8.png",
   "static/media/classic.png": "static/media/classic.8c579f14.png",
+  "static/media/classicMobile.png": "static/media/classicMobile.c12ddae8.png",
   "static/media/econom.png": "static/media/econom.a00ea286.png",
+  "static/media/economMobile.png": "static/media/economMobile.ccb57b05.png",
   "static/media/headerBG.png": "static/media/headerBG.745f754b.png",
   "static/media/headerBG768.png": "static/media/headerBG768.a3186268.png",
   "static/media/lato-v14-latin-700.ttf": "static/media/lato-v14-latin-700.f467f2d0.ttf",
@@ -14,5 +17,11 @@
   "static/media/lato-v14-latin-regular.ttf": "static/media/lato-v14-latin-regular.da4b79be.ttf",
   "static/media/lato-v14-latin-regular.woff": "static/media/lato-v14-latin-regular.62fb51e9.woff",
   "static/media/lato-v14-latin-regular.woff2": "static/media/lato-v14-latin-regular.f1a4a058.woff2",
-  "static/media/modern.png": "static/media/modern.e3d0dfc9.png"
+  "static/media/modern.png": "static/media/modern.e3d0dfc9.png",
+  "static/media/modernMobile.png": "static/media/modernMobile.6de89207.png",
+  "static/media/pacifico-v12-latin_cyrillic-regular.eot": "static/media/pacifico-v12-latin_cyrillic-regular.8b26721a.eot",
+  "static/media/pacifico-v12-latin_cyrillic-regular.svg": "static/media/pacifico-v12-latin_cyrillic-regular.03dd4cb4.svg",
+  "static/media/pacifico-v12-latin_cyrillic-regular.ttf": "static/media/pacifico-v12-latin_cyrillic-regular.c44511df.ttf",
+  "static/media/pacifico-v12-latin_cyrillic-regular.woff": "static/media/pacifico-v12-latin_cyrillic-regular.2e5d2873.woff",
+  "static/media/pacifico-v12-latin_cyrillic-regular.woff2": "static/media/pacifico-v12-latin_cyrillic-regular.8416cf5b.woff2"
 }

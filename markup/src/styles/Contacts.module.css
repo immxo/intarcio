@@ -66,6 +66,10 @@
         grid-template-columns: auto 260px auto;
     }
 
+    .contacts{
+        padding: 40px 20px 40px 20px;
+    }
+
     .contacts__textarea{
         width: 240px;
     }

@@ -65,4 +65,9 @@
     .text{
         margin: 20px 0 40px 0;
     }
+
+    .HowWorks{
+        background-color: #fff;
+        padding: 40px 20px 40px 20px;
+    }
 }

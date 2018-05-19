@@ -22,6 +22,7 @@ class Kitchen extends Component {
                         свободному подходу к ним. Главное – это удобство.
                     </p>
                     <div className={styles.kitchenType}>
+                        <h3 className={styles.kitchenType__titleMobile}>Классические кухни</h3>
                         <div className={styles.kitchenType__classicImg}></div>
                         <div className={styles.kitchenType__container}>
                             <h3 className={styles.kitchenType__title}>Классические кухни</h3>
@@ -37,6 +38,7 @@ class Kitchen extends Component {
                         </div>
                     </div>
                     <div className={styles.kitchenType}>
+                        <h3 className={styles.kitchenType__titleMobile}>Современные кухни</h3>
                         <div className={styles.kitchenType__modernImg}></div>
                         <div className={styles.kitchenType__container}>
                             <h3 className={styles.kitchenType__title}>Современные кухни </h3>
@@ -52,6 +54,7 @@ class Kitchen extends Component {
                         </div>
                     </div>
                     <div className={styles.kitchenType}>
+                        <h3 className={styles.kitchenType__titleMobile}>Экономные кухни</h3>
                         <div className={styles.kitchenType__economImg}></div>
                         <div className={styles.kitchenType__container}>
                             <h3 className={styles.kitchenType__title}>Экономные кухни </h3>

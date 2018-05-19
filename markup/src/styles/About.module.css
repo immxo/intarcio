@@ -11,7 +11,7 @@ h1,h2,p{
 
 .about{
     padding: 40px 30px 40px 30px;
-    background-color: #EFEFEF;
+    background-color: #f5f5f5;
 }
 
 .title{
@@ -31,4 +31,11 @@ h1,h2,p{
 
 .textList{
     font: 16px Lato;
+}
+
+@media screen and (max-width: 450px) {
+    .about{
+        padding: 40px 20px 40px 20px;
+        background-color: #EFEFEF;
+    }
 }

@@ -92,3 +92,56 @@
     height: 24px;
     margin: 0 0 0 0;
 }
+
+.kitchenType__title-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .kitchen__container{
+        width: 100vw;
+    }
+
+    .kitchenType__classicImg{
+        background-image: url("../media/kitchen/classicMobile.png");
+        width: 320px;
+        height: 159px;
+    }
+
+    .kitchenType__modernImg{
+        background-image: url("../media/kitchen/modernMobile.png");
+        width: 320px;
+        height: 159px;
+    }
+
+    .kitchenType__economImg{
+        background-image: url("../media/kitchen/economMobile.png");
+        width: 320px;
+        height: 159px;
+    }
+
+    .kitchenType{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .kitchenType__titleMobile{
+        display: inline;
+        font: 18px Lato;
+        font-weight: 700;
+        margin: 40px 0 20px 0;
+    }
+
+    .kitchenType__title{
+        display: none;
+    }
+
+    .kitchen__title{
+        font: 26px Lato;
+        margin: 0 20px 20px 20px;
+    }
+
+    .kitchen__text{
+        margin: 0 20px 0 20px;
+    }
+}
