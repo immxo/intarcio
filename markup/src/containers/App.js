@@ -9,6 +9,7 @@ import Kitchen from "../components/Kitchen";
 import Bedroom from "../components/Bedroom";
 import {connect} from "react-redux";
 import * as modalAction from '../actions/ModalAction'
+import * as menuAction from '../actions/MenuAction'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -16,13 +17,16 @@ class App extends Component {
 
         const {modalIsOpen, display, title, notificationIsOpen, text, source, orderIsOpen} = this.props.modal
         const {openModal , closeModal, openNotification, closeNotification, openOrder, closeOrder} = this.props.modalAction
+        const {toggle} = this.props.menu
+        const {toggleMenu} = this.props.menuAction
         return(
 
         <Router>
             <div>
                 <Header modalIsOpen={modalIsOpen} display={display} title={title} notificationIsOpen={notificationIsOpen}
                         text={text} source={source} openModal={openModal} closeModal={closeModal}
-                        openNotification={openNotification} closeNotification={closeNotification}
+                        openNotification={openNotification} closeNotification={closeNotification} toggle={toggle}
+                        toggleMenu={toggleMenu}
                 />
                 <Route path="/kitchen"
                        render={(props) => <Kitchen {...props} orderIsOpen={orderIsOpen} source={source}
@@ -49,13 +53,15 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        modal: state.modal
+        modal: state.modal,
+        menu: state.menu
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        modalAction: bindActionCreators(modalAction, dispatch)
+        modalAction: bindActionCreators(modalAction, dispatch),
+        menuAction: bindActionCreators(menuAction, dispatch)
     }
 }
 

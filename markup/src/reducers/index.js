@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import modal from './modal'
+import menu from './menu'
 
 const reducer = combineReducers({
-    modal
+    modal,
+    menu
 })
 
 export default reducer

@@ -36,44 +36,48 @@ class Header extends Component {
     };
 
     modalCallMaster() {
-        this.props.openModal('master');
+        this.props.openModal('master')
     }
 
     modalBackCall() {
-        this.props.openModal('back');
+        this.props.openModal('back')
     }
 
 
     onCloseModalBtnClick() {
-        this.props.closeModal();
+        this.props.closeModal()
     }
 
     openNotification(bool){
-        this.props.openNotification(bool);
+        this.props.openNotification(bool)
     }
 
     closeNotification(){
-        this.props.closeNotification();
+        this.props.closeNotification()
     }
 
     onChangeName(e){
-        let val = e.target.value;
+        let val = e.target.value
         this.setState({name: val})
     }
 
     onChangeTel(e){
-        let val = e.target.value;
+        let val = e.target.value
         this.setState({tel: val})
     }
 
     onChangeEmail(e){
-        let val = e.target.value;
+        let val = e.target.value
         this.setState({email: val})
     }
 
     onChangeComment(e){
-        let val = e.target.value;
+        let val = e.target.value
         this.setState({comment: val})
+    }
+
+    toggleMenu(bool){
+        this.props.toggleMenu(bool)
     }
 
     handleSubmit(e, source){
@@ -113,7 +117,8 @@ class Header extends Component {
                         </a>
                     </div>
 
-                    <div className={styles.menu__icon}>
+                    <div className={this.props.toggle ? 'src-styles-__Header-module___menu__icon-open' :
+                        'src-styles-__Header-module___menu__icon'} onClick={()=>this.toggleMenu(this.props.toggle)}>
                         <span></span>
                         <span></span>
                         <span></span>
@@ -142,7 +147,8 @@ class Header extends Component {
 
                 </div>
 
-                <nav className={styles.navMobile}>
+                <nav className={this.props.toggle ? 'src-styles-__Header-module___navMobile' :
+                    'src-styles-__Header-module___hidden'}>
                     <Scrollchor to="#catalog" animate={{  duration: 400 }} className={styles.catalog__link}>
                         <Link  to="/kitchen" className={styles.catalog__link}>Кухни</Link>
                     </Scrollchor>
@@ -159,19 +165,23 @@ class Header extends Component {
                     <a className={styles.catalog__link} href="">Еще <i className="fas fa-caret-down"></i></a>
                 </nav>
 
-                <div className={styles.slogan}>
+                <div className={this.props.toggle ? 'src-styles-__Header-module___hidden' :
+                    'src-styles-__Header-module___slogan'}>
                     <h1 className={styles.slogan__title}>Производство корпусной мебели – это<br/> специализация нашей компании</h1>
                 </div>
 
                 <div className={styles.containerButton}>
-                    <button onClick={this.modalBackCall.bind(this)} className={styles.button}>
+                    <button onClick={this.modalBackCall.bind(this)} className={this.props.toggle ?
+                        'src-styles-__Header-module___hidden' : 'src-styles-__Header-module___button'}>
                         <div className={styles.backCall__img}></div>
-                        Обратный звонок
+                        <p className={styles.button__text}>Обратный звонок</p>
                     </button>
 
-                    <button onClick={this.modalCallMaster.bind(this)} className={styles.button}>
+                    <button onClick={this.modalCallMaster.bind(this)} className={this.props.toggle ?
+                        'src-styles-__Header-module___hidden' : 'src-styles-__Header-module___button ' +
+                        'src-styles-__Header-module___marginLeft'}>
                         <div className={styles.callMaster__img}></div>
-                        Вызов замерщика
+                        <p className={styles.button__text}>Вызов замерщика</p>
                     </button>
                 </div>
             </div>

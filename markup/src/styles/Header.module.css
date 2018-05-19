@@ -45,7 +45,7 @@ h1,h2,h3,p{
 }
 
 .header__container{
-    padding: 0 30px 0 30px;
+    padding: 0 20px 0 20px;
 }
 
 .logo{
@@ -117,9 +117,13 @@ h1,h2,h3,p{
     font: 18px Lato;
     display: flex;
     justify-content: center;
-    margin: 0 0 0 10px;
+    align-items: center;
     cursor: pointer;
     box-shadow: 0 2px 6px 0 rgba(252, 182, 0, 0.2);
+}
+
+.marginLeft{
+    margin-left: 10px;
 }
 
 .backCall__img{
@@ -216,7 +220,24 @@ h1,h2,h3,p{
     font: 32px Lato;
 }
 
+.hidden{
+    display: none;
+}
+
 @media screen and (max-width: 450px) {
+
+    @keyframes menu {
+        0%{
+            opacity: 0;
+            transform: translateX(50%);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
     .logo {
         margin: 0;
     }
@@ -259,10 +280,11 @@ h1,h2,h3,p{
         flex-direction: column;
         margin: 20px 0 0 auto;
         align-items: center;
+        animation: menu 400ms;
     }
 
     .catalog__link{
-        font: 18px Lato;
+        font: 20px Lato;
         color: #fff;
         text-decoration: none;
         margin: 5px 0 0 0;
@@ -281,7 +303,7 @@ h1,h2,h3,p{
         color: #FFFA6A;
     }
 
-    .menu__icon {
+    .menu__icon, .menu__icon-open {
         display: inline-block;
         width: 35px;
         height: 30px;
@@ -291,7 +313,7 @@ h1,h2,h3,p{
         align-self: flex-start;
     }
 
-    .menu__icon span {
+    .menu__icon span, .menu__icon-open span {
         display: block;
         position: absolute;
         height: 3px;
@@ -321,27 +343,51 @@ h1,h2,h3,p{
         top: 28px;
     }
 
-    .menu_state_open .menu__icon span:nth-child(1) {
+    .menu__icon-open span:nth-child(1) {
         top: 18px;
         width: 0%;
         left: 50%;
     }
 
-    .menu_state_open .menu__icon span:nth-child(2) {
+    .menu__icon-open span:nth-child(2) {
+        top: 18px;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
-    .menu_state_open .menu__icon span:nth-child(3) {
+    .menu__icon-open span:nth-child(3) {
+        top: 18px;
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
 
-    .menu_state_open .menu__icon span:nth-child(4) {
+    .menu__icon-open span:nth-child(4) {
         top: 18px;
         width: 0%;
         left: 50%;
+    }
+
+    .backCall__img{
+        background-image: url("../media/phoneMobile.png");
+        width: 16px;
+        height: 16px;
+        margin: 0;
+    }
+
+    .callMaster__img{
+        background-image: url("../media/rulerMobile.png");
+        width: 16px;
+        height: 16px;
+        margin: 0;
+    }
+
+    .button{
+        width: 135px;
+    }
+
+    .button__text{
+        width: 100px;
     }
 }
